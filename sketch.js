@@ -1,7 +1,7 @@
 // Moving stars background behind info
 //this is claude I wanted to revamp the starfield from my freshman year portfolio so I implemented a new version here with AI.
 new p5(function (p) {
-  const STAR_COUNT = 300;
+  const STAR_COUNT = 1000;
   const stars = [];
 
   function Star() {
