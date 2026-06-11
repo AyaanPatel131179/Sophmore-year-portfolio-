@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayaan Patel - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.min.js"></script>
+</head>
+<body>
+
+  <!-- star background -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ayaan Patel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-3 text-center">
+          <img src="me.jpg" alt="Ayaan Patel" class="profile-img" />
+        </div>
+        <div class="col-md-9">
+          <h1 class="fw-bold mb-1">Ayaan Patel</h1>
+          <p class="hero-tagline">Computer &amp; Information Sciences, Aerospace Engineering Track</p>
+          <p class="text-muted-light mb-0">
+            I'm a sophomore at the Morris County School of Technology, in the Computer and Information Sciences academy. I'm really into aerospace engineering and embedded systems, and my favorite kind of project is the one where the code actually does something you can see and touch.
+          </p>
+          <div class="info-grid">
+            <div class="info-item"><span class="label">School</span><span class="value">Morris County School of Technology</span></div>
+            <div class="info-item"><span class="label">Academy</span><span class="value">Computer &amp; Information Sciences</span></div>
+            <div class="info-item"><span class="label">Email</span><span class="value">Ayaan.patel@mcvts.org</span></div>
+            <div class="info-item"><span class="label">Graduation</span><span class="value">2028</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="content-section">
+    <div class="container">
+
+      <div class="section-card">
+        <h2 class="section-heading">About Me</h2>
+        <p>
+          I've always liked taking things apart to see how they work, and that's pretty much how I ended up into tech and engineering. At MCST I've been learning web development, software design, physical computing, and programming. Down the line I want to be an aerospace engineer and use coding to build smart systems, like embedded electronics and drones that can fly themselves. Honestly I learn the most on the projects that frustrate me, so I tend to go looking for the hard ones.
+        </p>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-heading">Experience</h2>
+        <ul class="simple-list">
+          <li>
+            <span class="item-title">Top Golf: Guest Sales Associate</span>
+            Helped customers find their way around and kept things moving during really busy shifts.
+          </li>
+          <li>
+            <span class="item-title">Kumon Learning Center: Teacher &amp; Grader</span>
+            Taught math and reading, graded work, and gave kids feedback to help them get better.
+          </li>
+          <li>
+            <span class="item-title">Isso Seva: Volunteer (200+ hours)</span>
+            Ran donation drives and helped put together community events, including a STEM session where I taught kids the physics of flight.
+          </li>
+          <li>
+            <span class="item-title">Family Business: Real Estate &amp; Management</span>
+            Worked with my dad and picked up budgeting, talking to clients, and managing properties.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-heading">Activities &amp; Leadership</h2>
+        <ul class="activity-columns">
+
+          <li><span class="item-title">Football</span>: Team member</li>
+          <li><span class="item-title">Track &amp; Field</span>: Varsity shotput</li>
+          <li><span class="item-title">Fitness Club</span>: Helped teach gym technique</li>
+          <li><span class="item-title">Robotics Club</span>: Outreach subteam leader</li>
+          <li><span class="item-title">TSA Drone Competition</span>: Team of six</li>
+          <li><span class="item-title">TSA Photographic Technology</span>: Competitor</li>
+          <li><span class="item-title">Esports Committee</span>: Founding member</li>
+          <li><span class="item-title">Photographer</span>: School events &amp; clubs</li>
+          <li><span class="item-title">Student Council</span>: Vice President</li>
+          <li><span class="item-title">Key Club</span>: Member (5 years)</li>
+          <li><span class="item-title">Indian Cultural Club</span>: Dance performances</li>
+          <li><span class="item-title">Leadership Summit</span>: Mountain Creek</li>
+          <li><span class="item-title">Leadership Training Conference</span>: TCNJ</li>
+
+        </ul>
+      </div>
+<!-- icc vid with the boys. Last for 2 days on streamable bc youtube won't let me upload it -->
+      <div class="section-card">
+        <h2 class="section-heading">Highlight Reel</h2>
+        <div class="ratio ratio-16x9">
+          <iframe allow="fullscreen" allowfullscreen
+            src="https://streamable.com/e/8u64kb"
+            style="border:none;"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

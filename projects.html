@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Ayaan Patel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.min.js"></script>
+</head>
+<body>
+
+  <canvas id="starCanvas"></canvas>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ayaan Patel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section hero-section--short">
+    <div class="container">
+      <h1 class="fw-bold mb-1">Projects</h1>
+      <p class="text-muted-light mb-0">Projects I built in the Computer and Information Sciences program.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+
+      <!-- ===== SOPHOMORE YEAR ===== -->
+      <div class="year-divider"><span>Sophomore Year</span></div>
+
+      <!-- S1: Arduino Robotics Hand -->
+      <div class="project-card" id="project-s1">
+        <div class="project-header">
+          <h2 class="project-title">Arduino Robotics Hand</h2>
+          <p class="project-summary">A robotic hand made from cardboard with string tendons, controlled by an Arduino. Each finger is pulled by a servo motor through a string, copying how human tendons work.</p>
+        </div>
+
+        <div class="project-preview">
+          <img src="arduino-hand.jpg" alt="Arduino Robotics Hand" class="flip-h" />
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>C++ (Arduino IDE)</li>
+            <li>ELEGOO UNO R3 microcontroller</li>
+            <li>Servo motors (x2)</li>
+            <li>9V Duracell battery</li>
+            <li>Cardboard frame &amp; string tendons</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>I wanted to build something that connects code to real movement. By copying the tendon structure of a human hand in cardboard, I could see how software running on a microcontroller turns into physical motion.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>The hardest part was calibrating the servo values so the fingers moved smoothly without ripping the cardboard joints. Getting the string tension right took a lot of testing, and I had to adjust the code and the build at the same time.</p>
+        </div>
+
+        <div class="project-links">
+          <a href="https://docs.google.com/presentation/d/1TC9spTNmw4XEXiRIFN0Adl8-0rSRTootbSmiq-QF7CA/edit?usp=sharing" class="btn-project" target="_blank">View Slides</a>
+        </div>
+      </div>
+
+      <!-- S2 -->
+      <div class="project-card" id="project-s2">
+        <div class="project-header">
+          <h2 class="project-title">Shield Bot: Obstacle Course</h2>
+          <p class="project-summary">A wheeled robot programmed to drive through an obstacle course on its own. It uses servo motors to move and an ultrasonic sensor to stop when it gets close to an object.</p>
+        </div>
+
+        <div class="project-preview">
+          <img src="shieldbot.jpg" alt="Shield Bot Obstacle Course" />
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>Arduino IDE</li>
+            <li>ELEGOO Shield Bot</li>
+            <li>Servo motors</li>
+            <li>HC-SR04 ultrasonic sensor</li>
+            <li>Servo.h library</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>The robot had to finish a course by itself with no remote control. It follows a set path of turns and forward moves, then stops automatically when the ultrasonic sensor sees something within 6 inches.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>Getting accurate 90-degree turns was tricky because the wheels slipped on the floor. I had to keep testing and adjusting the turn timing. The distance sensor math also needed tuning so the readings matched real life. In the future, I'd like to improve the sensor accuracy and make the turns more precise through testing and servo calibration.</p>
+        </div>
+
+        <div class="project-links">
+          <button class="btn-project btn-project--outline" onclick="document.getElementById('modal-s2').style.display='flex'">View Code</button>
+        </div>
+      </div>
+
+      <!-- S3 -->
+      <div class="project-card" id="project-s3">
+        <div class="project-header">
+          <h2 class="project-title">Python Workout Stat Tracker</h2>
+          <p class="project-summary">A command-line Python program that logs my workouts and saves them to a text file. It can show past workouts and add up the total training volume.</p>
+        </div>
+
+        <div class="project-preview">
+          <img src="bench.jpg" alt="Python Workout Stat Tracker" />
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>Python</li>
+            <li>File reading and writing</li>
+            <li>Input validation and error handling</li>
+            <li>Menu like program design</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>I wanted a simple tool to track my own workout progress. Instead of a database it saves everything to a plain text file, which helped me practice reading and writing files. It also adds up sets, reps, and weight to show total training volume.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>At first the program crashed whenever a line in the text file was messed up. I added a check that skips bad lines, and I used try/except so the program doesn't crash if someone types letters instead of numbers. If I eas to do this again I would like to add a set of predefined list of workouts to make it easier to select from.</p>
+        </div>
+
+        <div class="project-links">
+          <button class="btn-project btn-project--outline" onclick="document.getElementById('modal-s3').style.display='flex'">View Code</button>
+          <a href="https://docs.google.com/document/d/1IJuuZvtKhRoKdNr0ddTykrgaTkjLv7Ykc3o2Yr6Fnoo/edit?usp=sharing" class="btn-project btn-project--outline" target="_blank">Planning Doc</a>
+        </div>
+      </div>
+
+      <!-- S4-->
+      <div class="project-card" id="project-s4">
+        <div class="project-header">
+          <h2 class="project-title">Python Turtle Image Generator</h2>
+          <p class="project-summary">A Python program that turns a photo into pixel art, drawn dot by dot using the Turtle library. It reads the brightness of each pixel and picks one of eight shades of gray.</p>
+        </div>
+
+        <div class="project-preview">
+          <iframe src="https://drive.google.com/file/d/1L09gHn96_VBEHL0clxHuzCe40ctAyvX8/preview" allowfullscreen title="Turtle Image Generator Demo"></iframe>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>Python</li>
+            <li>Turtle graphics library</li>
+            <li>Pillow for image processing</li>
+            <li>Grayscale brightness mapping</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>This project connects image processing and drawing. The program uses Pillow to read how bright each pixel is, then uses Turtle to place a colored dot for it, rebuilding the image out of gray dots.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>The main challenge while making the project was the amount of time it took to draw the image as turtle draw one dot at a time. I turned off the screen tracer feature and only updated once at the end making the code faster. Picking the right brightness levels for each gray shade also took some trial and error as I had to manually match everything.</p>
+        </div>
+
+        <div class="project-links">
+          <button class="btn-project btn-project--outline" onclick="document.getElementById('modal-s4').style.display='flex'">View Code</button>
+        </div>
+      </div>
+
+      <!-- FRESHMAN YEAR -->
+      <div class="year-divider"><span>Freshman Year</span></div>
+
+      <!-- Noiselab -->
+      <div class="project-card" id="project-1">
+        <div class="project-header">
+          <h2 class="project-title">Noiselab: 3D Terrain Generator</h2>
+          <p class="project-summary">An interactive 3D terrain that is generated with Perlin noise. You can rotate the terrain and change it while it's running.</p>
+        </div>
+
+        <div class="project-preview">
+          <iframe src="https://editor.p5js.org/ayaan.patel/full/AxglUON2L" title="Noiselab Interactive Terrain"></iframe>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>JavaScript</li>
+            <li>p5.js WEBGL</li>
+            <li>Perlin noise</li>
+            <li>3D vertex </li>
+          </ul>
+        </div>
+
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>The goal was to see how noise functions can make natural the terrain could be. Instead of random points, Perlin noise makes smooth, continuous hills like you see in games like Minecraft.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>Mapping a 2D noise field onto a 3D mesh in real time without lagging was tough. I limited the grid size and moved the noise seed each frame to animate it.</p>
+        </div>
+
+
+        <div class="project-links">
+          <a href="https://editor.p5js.org/ayaan.patel/full/AxglUON2L" class="btn-project" target="_blank">Live Demo</a>
+          <a href="https://editor.p5js.org/ayaan.patel/sketches/AxglUON2L" class="btn-project btn-project--outline" target="_blank">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Cactus -->
+      <div class="project-card" id="project-2">
+        <div class="project-header">
+          <h2 class="project-title">Ecosystem: Swaying Cactus</h2>
+          <p class="project-summary">An animated cactus that sways like it is in the wind, made for an ecosystem project using sine and cosine.</p>
+        </div>
+
+        <div class="project-preview">
+          <iframe src="https://editor.p5js.org/ayaan.patel/full/UbZhKTkrG" title="Ecosystem Cactus"></iframe>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>JavaScript</li>
+            <li>p5.js (2D)</li>
+            <li>Sine/cosine animation</li>
+            <li>Object-oriented design</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>The assignment was to design a living thing that behaves believably in a shared environment. The cactus needed to look rooted but still react to wind without using any animation libraries.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>Making the sway look natural instead of robotic was the main challenge. I added phase offsets and changed the amount of sway per branch so it looked more organic.</p>
+        </div>
+
+        <div class="project-links">
+          <a href="https://editor.p5js.org/ayaan.patel/full/UbZhKTkrG" class="btn-project" target="_blank">Live Demo</a>
+          <a href="https://editor.p5js.org/ayaan.patel/sketches/UbZhKTkrG" class="btn-project btn-project--outline" target="_blank">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Bubble Lab -->
+      <div class="project-card" id="project-3">
+        <div class="project-header">
+          <h2 class="project-title">Bubble Lab: Particle Simulation</h2>
+          <p class="project-summary">Colorful bubbles that float upward and react to the mouse and keyboard. A simple particle system.</p>
+        </div>
+
+        <div class="project-preview">
+          <iframe src="https://editor.p5js.org/ayaan.patel/full/CqRRXaNtN" title="Bubble Lab"></iframe>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>JavaScript</li>
+            <li>p5.js (2D)</li>
+            <li>Particle system</li>
+            <li>HSB color model</li>
+            <li>Mouse/keyboard events</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>This project shows how many simple objects following the same rules can create something interesting. Each bubble has its own speed, size, and color.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>I had to spawn new bubbles and remove off-screen ones so the program didn't slow down over time. Using the HSB color model let the colors shift smoothly.</p>
+        </div>
+
+        <div class="project-links">
+          <a href="https://editor.p5js.org/ayaan.patel/full/CqRRXaNtN" class="btn-project" target="_blank">Live Demo</a>
+          <a href="https://editor.p5js.org/ayaan.patel/sketches/CqRRXaNtN" class="btn-project btn-project--outline" target="_blank">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Rain Lab -->
+      <div class="project-card" id="project-4">
+        <div class="project-header">
+          <h2 class="project-title">Rain Lab: Rainfall Simulation</h2>
+          <p class="project-summary">A rainfall simulation where each raindrop falls with gravity and wind, made only with code and no images.</p>
+        </div>
+
+        <div class="project-preview">
+          <iframe src="https://editor.p5js.org/ayaan.patel/full/mKE0Vjslb" title="Rain Lab"></iframe>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>JavaScript</li>
+            <li>p5.js (2D)</li>
+            <li>Gravity and velocity physics</li>
+            <li>Particle reuse for performance</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>The goal was to make rain using only code. Each drop is a physics object that falls with gravity and drifts with wind.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>Drawing hundreds of drops without lag was hard. I reused raindrop objects instead of making new ones each frame, and drew each drop as a line based on its speed to get the streaky look.</p>
+        </div>
+
+        <div class="project-links">
+          <a href="https://editor.p5js.org/ayaan.patel/full/mKE0Vjslb" class="btn-project" target="_blank">Live Demo</a>
+          <a href="https://editor.p5js.org/ayaan.patel/sketches/mKE0Vjslb" class="btn-project btn-project--outline" target="_blank">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Desert Ecosystem -->
+      <div class="project-card" id="project-5">
+        <div class="project-header">
+          <h2 class="project-title">Ecosystem: Desert Scene</h2>
+          <p class="project-summary">A bigger ecosystem with several organisms interacting in a desert, building on the cactus project.</p>
+        </div>
+
+        <div class="project-preview">
+          <iframe src="https://editor.p5js.org/ayaan.patel/full/VkeiUSL2U" title="Desert Ecosystem"></iframe>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">Tools I Used</h3>
+          <ul class="stack-list">
+            <li>JavaScript</li>
+            <li>p5.js (2D)</li>
+            <li>Class hierarchy (OOP)</li>
+            <li>Layered scene composition</li>
+          </ul>
+        </div>
+
+        <div class="project-details">
+          <h3 class="detail-heading">About the Project</h3>
+          <p>This expanded the single cactus into multiple organisms sharing one environment. It shows how different objects can coexist and react to shared state.</p>
+          <h3 class="detail-heading mt-3">Challenges</h3>
+          <p>Keeping the code from getting tangled was the main challenge. I made a shared environment object that each organism checks, instead of having them talk to each other directly.</p>
+        </div>
+
+        <div class="project-links">
+          <a href="https://editor.p5js.org/ayaan.patel/full/VkeiUSL2U" class="btn-project" target="_blank">Live Demo</a>
+          <a href="https://editor.p5js.org/ayaan.patel/sketches/VkeiUSL2U" class="btn-project btn-project--outline" target="_blank">Source Code</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="mb-0 text-muted-light">© 2026 Ayaan Patel · <a href="mailto:Ayaan.patel@mcvts.org">Ayaan.patel@mcvts.org</a></p>
+    </div>
+  </footer>
+
+  <!-- ===== Code Modals ===== -->
+  <div id="modal-s2" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#16273c;border:1px solid #2a3d54;border-radius:8px;max-width:700px;width:100%;max-height:85vh;display:flex;flex-direction:column;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1.1rem;border-bottom:1px solid #2a3d54;">
+        <span style="font-weight:bold;">Shield Bot Code</span>
+        <button onclick="document.getElementById('modal-s2').style.display='none'" style="background:none;border:none;color:#9aa8bd;font-size:1.3rem;cursor:pointer;line-height:1;">&times;</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;overflow:auto;font-size:0.82rem;line-height:1.6;color:#c3ccda;"><code>#include &lt;Servo.h&gt;
+
+Servo leftServo;
+Servo rightServo;
+
+int echoPin = 10;
+int trigPin  = 9;
+
+float duration;
+
+void setup() {
+  Serial.begin(9600);
+  leftServo.attach(13);
+  rightServo.attach(12);
+
+  forward(10);
+
+  for (int i = 0; i &lt;= 3; i++) {
+    turn("right");
+    forward(3);
+  }
+}
+
+void loop() {
+  forward(.5);
+  float distance = getDistance();
+  Serial.println(distance);
+  if (distance &lt;= 6) {
+    leftServo.detach();
+    rightServo.detach();
+  }
+}
+
+void turn(String direction) {
+  if (direction == "right") {
+    leftServo.write(1700);
+    rightServo.write(1700);
+    delay(625);
+  } else if (direction == "left") {
+    leftServo.write(1300);
+    rightServo.write(1300);
+    delay(625);
+  }
+}
+
+void forward(int time) {
+  leftServo.write(1700);
+  rightServo.write(1300);
+  delay(time * 1000);
+}
+
+float getDistance() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  float inches = duration * 0.0133 / 2;
+  return inches;
+}</code></pre>
+    </div>
+  </div>
+
+  <div id="modal-s3" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#16273c;border:1px solid #2a3d54;border-radius:8px;max-width:700px;width:100%;max-height:85vh;display:flex;flex-direction:column;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1.1rem;border-bottom:1px solid #2a3d54;">
+        <span style="font-weight:bold;">Workout Tracker Code</span>
+        <button onclick="document.getElementById('modal-s3').style.display='none'" style="background:none;border:none;color:#9aa8bd;font-size:1.3rem;cursor:pointer;line-height:1;">&times;</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;overflow:auto;font-size:0.82rem;line-height:1.6;color:#c3ccda;"><code>FILENAME = "workouts.txt"
+
+def load_workouts():
+    workouts = []
+    try:
+        with open(FILENAME, "r") as file:
+            for line in file:
+                line = line.strip()
+                if line:
+                    parts = line.strip().split(",")
+                    if len(parts) != 5:
+                        continue
+                    workout = {
+                        "exercise": parts[0],
+                        "sets":     int(parts[1]),
+                        "reps":     int(parts[2]),
+                        "weight":   int(parts[3]),
+                        "date":     parts[4],
+                    }
+                    workouts.append(workout)
+    except FileNotFoundError:
+        with open(FILENAME, "w") as file:
+            pass
+    return workouts
+
+def save_workouts(excercise, sets, reps, weight, date):
+    with open(FILENAME, "a") as file:
+        file.write(f"{excercise},{sets},{reps},{weight},{date}\n")
+
+def view_workouts(workouts):
+    if not workouts:
+        print("No workouts found.")
+        return
+    for workout in workouts:
+        print(f"{workout['date']} - {workout['exercise']}: "
+              f"{workout['sets']} sets x {workout['reps']} reps @ {workout['weight']} lbs")
+    print()
+
+def calculate_total_volume(workouts):
+    total_volume = 0
+    for workout in workouts:
+        total_volume += workout["sets"] * workout["reps"] * workout["weight"]
+    print(f"Total Training Volume: {total_volume} lbs")
+
+def add_workout():
+    exercise = input("exercise name: ").strip()
+    if not exercise:
+        print("exercise name cannot be empty.")
+        return
+    try:
+        sets   = int(input("sets: "))
+        reps   = int(input("reps: "))
+        weight = int(input("weight: "))
+    except ValueError:
+        print("invalid number inputed try again.")
+        return
+    date = input("date (YYYY-MM-DD)").strip()
+    if not date:
+        print("Date cannot be empty.")
+        return
+    save_workouts(exercise, sets, reps, weight, date)
+    print("Workouts saved")
+
+def main():
+    while True:
+        workouts = load_workouts()
+        print("workout tracker")
+        print("1. View workouts")
+        print("2. Add workout")
+        print("3. View total volume")
+        print("4. exit")
+        choice = input("enter your choice: ").strip()
+        if choice == "1":
+            view_workouts(workouts)
+        elif choice == "2":
+            add_workout()
+        elif choice == "3":
+            calculate_total_volume(workouts)
+        elif choice == "4":
+            print("thanks for using workout tracker. Stay Strong Stay Hard")
+            break
+        else:
+            print("invalid choice entered. Try again 1-4")
+
+if __name__ == "__main__":
+    main()</code></pre>
+    </div>
+  </div>
+
+  <div id="modal-s4" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#16273c;border:1px solid #2a3d54;border-radius:8px;max-width:700px;width:100%;max-height:85vh;display:flex;flex-direction:column;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1.1rem;border-bottom:1px solid #2a3d54;">
+        <span style="font-weight:bold;">Turtle Image Generator Code</span>
+        <button onclick="document.getElementById('modal-s4').style.display='none'" style="background:none;border:none;color:#9aa8bd;font-size:1.3rem;cursor:pointer;line-height:1;">&times;</button>
+      </div>
+      <pre style="margin:0;padding:1.1rem;overflow:auto;font-size:0.82rem;line-height:1.6;color:#c3ccda;"><code># Ayaan Patel, 9/15/2025
+# Turtles project with more gray shades
+from turtle import Turtle, Screen
+from PIL import Image
+
+try:
+    pixel_size = int(input("Pixel Size (4 to 8): "))
+except ValueError:
+    print("Invalid Pixel Size default 5 will be used")
+    pixel_size = 5
+
+# Luminance converts to greyscale, resize for performance
+img = Image.open("car.JPG").convert("L")
+img = img.resize((150, 150))
+
+t = Turtle()
+t.penup()
+t.speed(25)
+t.hideturtle()
+Screen().tracer(0)
+Screen().update()
+
+width  = img.width  * pixel_size
+height = img.height * pixel_size / 2
+
+x_offset = -width  // 2
+y_offset  =  height // 2
+
+def brightness_to_color(brightness):
+    if brightness &lt; 30:  return "black"
+    elif brightness &lt; 60:  return "dimgray"
+    elif brightness &lt; 90:  return "gray"
+    elif brightness &lt; 120: return "darkgray"
+    elif brightness &lt; 150: return "silver"
+    elif brightness &lt; 180: return "lightgray"
+    elif brightness &lt; 210: return "gainsboro"
+    else: return None  # skip white background
+
+def draw_image():
+    t.penup()
+    t.goto(x_offset, y_offset)
+    for y in range(img.height):
+        print(f"Processing row {y + 1}/{img.height}")
+        for x in range(img.width):
+            brightness = img.getpixel((x, y))
+            color = brightness_to_color(brightness)
+            if color:
+                t.goto(x * pixel_size + x_offset, -(y * pixel_size) + y_offset)
+                t.dot(pixel_size, color)
+
+screen = Screen()
+screen.listen()
+screen.onkey(draw_image, "s")
+screen.onkey(screen.bye, "q")
+
+print("press s to start drawing")
+print("press q to quit")
+
+screen.mainloop()</code></pre>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
